@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('orderhistory', RESEED, 1);
