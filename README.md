@@ -89,56 +89,18 @@ WinForms UI (Login, Stocks, CreateOrder, OrderHistory, SalesReport, Archive)
 
 ```
 GamingRigz/
-├── Database1/                      # SQL Server Database Project
-│   ├── dbo/
-│   │   └── Tables/
-│   │       ├── createaccount.sql
-│   │       ├── dbo.Table.sql
-│   │       └── stocks.sql
-│   └── Database1.sqlproj
-├── db/                              # Secondary SQL Server Database Project
-│   ├── dbo/
-│   │   └── Tables/
-│   │       ├── Cart.sql
-│   │       ├── archive.sql
-│   │       ├── createaccount.sql
-│   │       └── stocks.sql
-│   └── db.sqlproj
-├── GamingRigz/                      # WinForms application project
-│   ├── Properties/
-│   │   ├── AssemblyInfo.cs
-│   │   ├── Resources.Designer.cs / Resources.resx
-│   │   └── Settings.Designer.cs / Settings.settings
-│   ├── Resources/
-│   │   └── icons8_Plusgreen_16.png
-│   ├── App.config
-│   ├── FodyWeavers.xml
-│   ├── licenses.licx
-│   ├── GamingRigz.csproj
-│   ├── Login.cs / Login.Designer.cs / Login.resx
-│   ├── Register.cs / Register.Designer.cs / Register.resx
-│   ├── PasswordRetrieval.cs / PasswordRetrieval.Designer.cs / PasswordRetrieval.resx
-│   ├── Stocks.cs / Stocks.Designer.cs / Stocks.resx
-│   ├── CreateOrder.cs / CreateOrder.Designer.cs / CreateOrder.resx
-│   ├── OrderHistory.cs / OrderHistory.Designer.cs / OrderHistory.resx
-│   ├── Archive.cs / Archive.Designer.cs / Archive.resx
-│   ├── SalesReport.cs / SalesReport.Designer.cs / SalesReport.resx
-│   ├── DatabaseHelpercs.cs
-│   ├── Product.cs
-│   ├── Program.cs
-│   └── packages.config
-├── Properties/                      # Root-level project properties
-├── Resources/                       # Root-level resources
-├── App.config
+├── Database1/           # SQL Server Database Project (schema)
+├── db/                  # Secondary SQL Server Database Project (overlapping schema — see note above)
+├── GamingRigz/           # WinForms application project
+│   ├── Properties/ Resources/     # App metadata and icons
+│   ├── *.cs / *.Designer.cs / *.resx   # Forms: Login, Register, PasswordRetrieval,
+│   │                                    # Stocks, CreateOrder, OrderHistory, Archive, SalesReport
+│   ├── DatabaseHelpercs.cs / Product.cs / Program.cs
+│   └── App.config / GamingRigz.csproj / packages.config
 ├── GamingRigz.sln
-├── GamingRigz.csproj
-├── DatabaseHelper.cs
-├── ReceiptUtility.cs
+├── DatabaseHelper.cs / ReceiptUtility.cs
 ├── SQLQuery1.sql / SQLQuery1(1).sql
-├── dbo.orderhistory.data(.sql)
-├── dbo.stocks(2-5).data.sql / dbo.stocks.data(.sql)
-├── packages.config
-├── .gitattributes / .gitignore
+├── dbo.*.data(.sql)      # Seed/reference data
 └── README.md
 ```
 
