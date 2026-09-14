@@ -35,6 +35,7 @@ The system helps shop staff:
 - 📊 **Sales reports** (`SalesReport.cs`) — summarize sales activity
 - 🧾 **Receipt generation** (`ReceiptUtility.cs`) — produce receipts for completed orders
 - 🗃️ **SQL Server–backed data layer** via `DatabaseHelper.cs` / `DatabaseHelpercs.cs`
+- 🚦 **Color-coded stock levels** — green/yellow/red indicators in `Stocks.cs` flag healthy, low, and critical inventory at a glance
 
 ## 🧾 Order Flow
 
@@ -144,7 +145,7 @@ GamingRigz/
 ## 🛠️ Tech Stack
 
 - **Language:** C#
-- **UI Framework:** Windows Forms (.NET Framework)
+- **UI Framework:** Windows Forms (.NET Framework), with color-coded conditional formatting for stock levels
 - **Database:** SQL Server (T-SQL)
 - **Schema Management:** SQL Server Database Projects (SSDT) — `Database1/`, `db/`
 - **Data Access:** ADO.NET via custom `DatabaseHelper` classes
@@ -171,9 +172,10 @@ GamingRigz/
 - ✅ Order creation and receipt generation
 - ✅ Order history and archive
 - ✅ Sales reporting
+- ✅ Color-coded stock level indicators (green/yellow/red)
 - 🔜 Consolidate `Database1` and `db` into a single database project
 - 🔜 Export sales reports to PDF/Excel
-- 🔜 Low-stock alerts and reorder notifications
+- 🔜 Automated low-stock reorder notifications (beyond the visual indicator)
 - 🔜 Role-based access (cashier vs. admin/manager)
 - 🔜 Packaged installer (MSI/ClickOnce) for easier deployment
 
